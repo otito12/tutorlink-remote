@@ -11,7 +11,7 @@ export default defineConfig({
       remotes: {
         remoteApp: "http://127.0.0.1:5001/assets/remoteEntry.js",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-katex"],
     }),
   ],
   build: {

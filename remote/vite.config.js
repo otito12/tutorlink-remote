@@ -12,7 +12,7 @@ export default defineConfig({
       exposes: {
         "./Button": "./src/Button",
       },
-      shared: ["react", "react-dom"],
+      shared: ["react", "react-dom", "react-katex"],
     }),
   ],
   build: {
