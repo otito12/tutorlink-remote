@@ -7,7 +7,6 @@ import CancelIcon from "@mui/icons-material/Cancel";
 
 // inserts the required css to the <head> block.
 // // you can skip this, if you want to do that by yourself.
-// addStyles();
 addStyles();
 
 export default function StyledFormulaInput({ ...props }) {
@@ -20,7 +19,6 @@ export default function StyledFormulaInput({ ...props }) {
       setCorrect(null);
       return;
     }
-
     if (userans === ans) {
       console.log(userans);
       console.log(ans);

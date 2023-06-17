@@ -15,7 +15,7 @@ export default defineConfig({
         "./ab5c7957-76ed-4403-8fc0-ddb62a8dfd24":
           "./src/questions/ab5c7957-76ed-4403-8fc0-ddb62a8dfd24",
       },
-      shared: ["react", "react-dom", "react-katex"],
+      shared: ["react", "react-dom", "react-katex", "react-mathquill"],
     }),
   ],
   build: {
