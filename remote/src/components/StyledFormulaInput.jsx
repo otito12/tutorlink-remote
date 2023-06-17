@@ -1,13 +1,13 @@
 import "./init";
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
-import { addStyles, EditableMathField } from "react-mathquill";
+import EditableMathField from "react-mathquill";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import CancelIcon from "@mui/icons-material/Cancel";
 
 // inserts the required css to the <head> block.
 // // you can skip this, if you want to do that by yourself.
-addStyles();
+// addStyles();
 
 export default function StyledFormulaInput({ ...props }) {
   const [latex, setLatex] = useState("");
@@ -56,6 +56,7 @@ export default function StyledFormulaInput({ ...props }) {
     >
       <Grid item flex={2} sx={{}}>
         <Grid container>
+          {/* Ass */}
           <EditableMathField
             latex={latex}
             onChange={(mathField) => {
