@@ -1,16 +1,15 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Button from "remoteApp/Button";
+import Test from "./test/test";
+import { Grid } from "@mui/material";
 
 function App() {
   return (
-    <>
-      <h1>Host Application</h1>
-      <div className="card"></div>
-      <Button />
-    </>
+    <Grid
+      container
+      sx={{ height: "100vh", width: "100vw" }}
+      alignContent={"start"}
+    >
+      <Test />
+    </Grid>
   );
 }
 

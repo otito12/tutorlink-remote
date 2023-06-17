@@ -5,7 +5,9 @@ import federation from "@originjs/vite-plugin-federation";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      include: "**/*.jsx",
+    }),
     federation({
       name: "app",
       remotes: {
