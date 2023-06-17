@@ -23,6 +23,13 @@ const z = Math.floor(Math.random() * (12 - (y + 1) + 1) + (y + 1));
 const i = Math.floor(Math.random() * (60 - 30 + 1) + 30);
 const j = Math.floor(Math.random() * (20 - 13 + 1) + 13);
 
+// generating answers
+const a_ans_0 = `${w + x}+${w + x + b}^2=${ans(x)}`;
+const a_ans_1 = `${w + y}+${w + y + b}^2=${ans(y)}`;
+const b_ans_0 = `${w + z}+${w + z + b}^2=${ans(z)}`;
+const c_ans_0 = `${w + i}+${w + i + b}^2=${ans(i)}`;
+const d_ans_0 = j;
+
 export default function Question({ questionNumber = 1 }) {
   return (
     <div>
@@ -84,7 +91,7 @@ export default function Question({ questionNumber = 1 }) {
                   <Typography variant="body2"> Row {x}:</Typography>
                 </Grid>
                 <Grid item>
-                  <StyledFormulaInput />
+                  <StyledFormulaInput ans={a_ans_0} />
                 </Grid>
               </Grid>
               <Grid
@@ -97,7 +104,7 @@ export default function Question({ questionNumber = 1 }) {
                   <Typography variant="body2"> Row {y}:</Typography>
                 </Grid>
                 <Grid item>
-                  <StyledNumberInput id="outlined-basic" variant="outlined" />
+                  <StyledFormulaInput ans={a_ans_1} variant="outlined" />
                 </Grid>
               </Grid>
             </Grid>
@@ -118,7 +125,7 @@ export default function Question({ questionNumber = 1 }) {
                   <Typography variant="body2"> Row {z}:</Typography>
                 </Grid>
                 <Grid item>
-                  <StyledNumberInput id="outlined-basic" variant="outlined" />
+                  <StyledFormulaInput ans={b_ans_0} variant="outlined" />
                 </Grid>
               </Grid>
             </Grid>
@@ -139,7 +146,7 @@ export default function Question({ questionNumber = 1 }) {
                   <Typography variant="body2"> Row {i}:</Typography>
                 </Grid>
                 <Grid item>
-                  <StyledNumberInput id="outlined-basic" variant="outlined" />
+                  <StyledFormulaInput ans={c_ans_0} variant="outlined" />
                 </Grid>
               </Grid>
             </Grid>
@@ -162,7 +169,7 @@ export default function Question({ questionNumber = 1 }) {
                   <Typography variant="body2">Answer:</Typography>
                 </Grid>
                 <Grid item>
-                  <StyledNumberInput id="outlined-basic" variant="outlined" />
+                  <StyledNumberInput ans={d_ans_0} variant="outlined" />
                 </Grid>
               </Grid>
             </Grid>

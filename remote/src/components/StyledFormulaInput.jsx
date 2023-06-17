@@ -10,8 +10,27 @@ import CancelIcon from "@mui/icons-material/Cancel";
 // addStyles();
 addStyles();
 
-export default function StyledFormulaInput() {
+export default function StyledFormulaInput({ ...props }) {
   const [latex, setLatex] = useState("");
+  const { ans } = props;
+  const [correct, setCorrect] = useState(null);
+  const checkCorrect = (latex) => {
+    const userans = latex.toString().replace(/\\[ ]+/g, "");
+    if (userans === "") {
+      setCorrect(null);
+      return;
+    }
+
+    if (userans === ans) {
+      console.log(userans);
+      console.log(ans);
+      setCorrect(true);
+    } else {
+      console.log(userans);
+      console.log(ans);
+      setCorrect(false);
+    }
+  };
   return (
     <Grid
       container
@@ -43,25 +62,31 @@ export default function StyledFormulaInput() {
             latex={latex}
             onChange={(mathField) => {
               setLatex(mathField.latex());
+              checkCorrect(mathField.latex());
             }}
           />
         </Grid>
       </Grid>
-      <Grid item flex={1}>
-        <Grid
-          justifyContent={"end"}
-          alignContent={"center"}
-          container
-          sx={{
-            p: 1,
-            pr: 1.5,
-            height: "100%",
-          }}
-        >
-          <CheckCircleIcon color="success" />
-          <CancelIcon color="error" />
+
+      {correct === null ? (
+        <></>
+      ) : (
+        <Grid item flex={1}>
+          <Grid
+            justifyContent={"end"}
+            alignContent={"center"}
+            container
+            sx={{
+              p: 1,
+              pr: 1.5,
+              height: "100%",
+            }}
+          >
+            {correct === true && <CheckCircleIcon color="success" />}
+            {correct === false && <CancelIcon color="error" />}
+          </Grid>
         </Grid>
-      </Grid>
+      )}
     </Grid>
   );
 }
