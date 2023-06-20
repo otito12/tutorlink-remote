@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import "./index.css";
+// this import style depracated fix later
 import style from "@edtr-io/mathquill/build/mathquill.css";
 
 if (document.getElementById("react-mathquill-styles") == null) {
