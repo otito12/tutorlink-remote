@@ -18,11 +18,15 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.5",
     "dotenv": "^16.3.1",
+    "konva": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-katex": "^3.0.1",
+    "react-konva": "^18.2.9",
     "react-mathquill": "^1.0.3",
-    "socket.io": "^4.6.2"
+    "socket.io": "^4.6.2",
+    "socket.io-client": "^4.6.2",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "@originjs/vite-plugin-federation": "^1.2.3",
