@@ -36,9 +36,6 @@ export default function Question({ questionNumber = 1 }) {
       <Grid
         sx={{
           pb: 2,
-          "& .katex-html": {
-            display: "none",
-          },
         }}
       >
         <Typography fontWeight={600}>QUESTION {questionNumber}</Typography>
